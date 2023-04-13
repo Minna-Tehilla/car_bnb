@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search_car</title>
+    <style>
+ body {background-color: lightblue;}
+p   {color: blue;  font-family: verdana;
+  font-size: 100%;}
+input
+{color: white;font-family: verdana;font-size: 100%;border:black solid 5pxl}
+
+        erroelist{color:red;display:block}
+    </style>
+</head>
+<body>
+<form action="{%url 'search_car' %}" method="post" enctype="multipart/form-data">
+    {{form.as_p}}
+    <p>Please type here your search value:</p>
+    <input name="search_str">
+    {% csrf_token %}
+<!--      <input type="text" name="search_string"/>-->
+    </br>
+    </br>
+  <input type="submit"/>
+</form>
+</body>
+</html>

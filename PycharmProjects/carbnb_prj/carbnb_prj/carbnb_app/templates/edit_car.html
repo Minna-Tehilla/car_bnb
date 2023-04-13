@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+body {background-color: powderblue;}
+h1   {color: blue;  font-family: verdana;
+  font-size: 300%;}
+p    {color: white;font-family: verdana;font-size: 100%;}
+</style>
+    <meta charset="UTF-8">
+    <title>Car to edit:</title>
+</head>
+<body>
+<h1>The following is the info regarding the car you wish to edit:</h1>
+<form action="{% url 'edit_car' plate_number=plate_number %}" method="post" >
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit">
+    </form>
+
+</body>
+</html>

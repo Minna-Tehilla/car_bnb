@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+body {background-color: powderblue;}
+h1   {color: blue;  font-family: verdana;
+  font-size: 300%;}
+p    {color: white;font-family: verdana;font-size: 100%;}
+a    {color: white;font-family: verdana;font-size: 200%;border:black solid}
+</style>
+    <meta charset="UTF-8">
+    <title>Cars_list</title>
+</head>
+<body>
+<h1>Our Carbnb Car List:</h1>
+{%csrf_token%}
+{%for car in cars%}
+<a href="{%url 'edit_car' plate_number=car.plate_number%}">
+{{car.type}}
+</a>
+<br/>
+{%endfor%}
+    <p>{{car.type}}</p>
+<h1 >Thank you for using carbnb!!!</h1>
+
+</body>
+</html>

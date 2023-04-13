@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+body {background-color: powderblue;}
+h1   {color: blue;  font-family: verdana;
+  font-size: 300%;}
+p    {color: white;font-family: verdana;font-size: 100%;}
+</style>
+    <meta charset="UTF-8">
+    <title> CARS</title>
+</head>
+<body>
+<h1>Please enjoy reading the list of owners and car types we have:</h1>
+{%for c in car_type%}
+<p>{{c.owner}},{{c.type}}</p>
+{%endfor%}
+<!--{{car_type}}-->
+<h1>Thank you for using carbnb!</h1>
+
+
+</body>
+</html>

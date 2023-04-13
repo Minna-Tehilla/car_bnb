@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Base</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+<p>Welcome {{user.username}} </p>
+<button onclick="window.location='logout'"> Logout </button>
+{% else %}
+<button onclick="window.location='login'"> Login </button>
+
+
+
+{% endif %}
+<br>
+<button onclick="window.location='display_list'">Display user info</button> #fix the list here, it shows the car list instead of person list
+{%block content_block %}
+
+{%endblock%}
+
+</body>
+</html>
